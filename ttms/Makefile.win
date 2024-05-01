@@ -1,0 +1,103 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = src/View/Account_UI.o src/View/Main_Menu.o src/View/play_UI.o src/View/Queries_UI.o src/View/SalesAnalysis_UI.o src/View/schedule_UI.o src/View/Seat_UI.o src/View/Studio_UI.o src/View/Ticket_UI.o src/Service/Account_Ser.o src/Service/Play_Ser.o src/Service/SalesAnalysis_Ser.o src/Service/schedule_Ser.o src/Service/Seat.o src/Service/Studio.o src/Service/Ticket_Ser.o src/Persistence/Account_Persis.o src/Persistence/EntityKey_Persist.o src/Persistence/Play_Persis.o src/Persistence/schedule_Persis.o src/Persistence/Seat_Persist.o src/Persistence/Studio_Persist.o src/Persistence/Ticket_Persis.o src/Common/common.o src/Common/listTestDrv.o src/TTMS.o
+LINKOBJ  = src/View/Account_UI.o src/View/Main_Menu.o src/View/play_UI.o src/View/Queries_UI.o src/View/SalesAnalysis_UI.o src/View/schedule_UI.o src/View/Seat_UI.o src/View/Studio_UI.o src/View/Ticket_UI.o src/Service/Account_Ser.o src/Service/Play_Ser.o src/Service/SalesAnalysis_Ser.o src/Service/schedule_Ser.o src/Service/Seat.o src/Service/Studio.o src/Service/Ticket_Ser.o src/Persistence/Account_Persis.o src/Persistence/EntityKey_Persist.o src/Persistence/Play_Persis.o src/Persistence/schedule_Persis.o src/Persistence/Seat_Persist.o src/Persistence/Studio_Persist.o src/Persistence/Ticket_Persis.o src/Common/common.o src/Common/listTestDrv.o src/TTMS.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 项目1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+src/View/Account_UI.o: src/View/Account_UI.c
+	$(CPP) -c src/View/Account_UI.c -o src/View/Account_UI.o $(CXXFLAGS)
+
+src/View/Main_Menu.o: src/View/Main_Menu.c
+	$(CPP) -c src/View/Main_Menu.c -o src/View/Main_Menu.o $(CXXFLAGS)
+
+src/View/play_UI.o: src/View/play_UI.c
+	$(CPP) -c src/View/play_UI.c -o src/View/play_UI.o $(CXXFLAGS)
+
+src/View/Queries_UI.o: src/View/Queries_UI.c
+	$(CPP) -c src/View/Queries_UI.c -o src/View/Queries_UI.o $(CXXFLAGS)
+
+src/View/SalesAnalysis_UI.o: src/View/SalesAnalysis_UI.c
+	$(CPP) -c src/View/SalesAnalysis_UI.c -o src/View/SalesAnalysis_UI.o $(CXXFLAGS)
+
+src/View/schedule_UI.o: src/View/schedule_UI.c
+	$(CPP) -c src/View/schedule_UI.c -o src/View/schedule_UI.o $(CXXFLAGS)
+
+src/View/Seat_UI.o: src/View/Seat_UI.c
+	$(CPP) -c src/View/Seat_UI.c -o src/View/Seat_UI.o $(CXXFLAGS)
+
+src/View/Studio_UI.o: src/View/Studio_UI.c
+	$(CPP) -c src/View/Studio_UI.c -o src/View/Studio_UI.o $(CXXFLAGS)
+
+src/View/Ticket_UI.o: src/View/Ticket_UI.c
+	$(CPP) -c src/View/Ticket_UI.c -o src/View/Ticket_UI.o $(CXXFLAGS)
+
+src/Service/Account_Ser.o: src/Service/Account_Ser.c
+	$(CPP) -c src/Service/Account_Ser.c -o src/Service/Account_Ser.o $(CXXFLAGS)
+
+src/Service/Play_Ser.o: src/Service/Play_Ser.c
+	$(CPP) -c src/Service/Play_Ser.c -o src/Service/Play_Ser.o $(CXXFLAGS)
+
+src/Service/SalesAnalysis_Ser.o: src/Service/SalesAnalysis_Ser.c
+	$(CPP) -c src/Service/SalesAnalysis_Ser.c -o src/Service/SalesAnalysis_Ser.o $(CXXFLAGS)
+
+src/Service/schedule_Ser.o: src/Service/schedule_Ser.c
+	$(CPP) -c src/Service/schedule_Ser.c -o src/Service/schedule_Ser.o $(CXXFLAGS)
+
+src/Service/Seat.o: src/Service/Seat.c
+	$(CPP) -c src/Service/Seat.c -o src/Service/Seat.o $(CXXFLAGS)
+
+src/Service/Studio.o: src/Service/Studio.c
+	$(CPP) -c src/Service/Studio.c -o src/Service/Studio.o $(CXXFLAGS)
+
+src/Service/Ticket_Ser.o: src/Service/Ticket_Ser.c
+	$(CPP) -c src/Service/Ticket_Ser.c -o src/Service/Ticket_Ser.o $(CXXFLAGS)
+
+src/Persistence/Account_Persis.o: src/Persistence/Account_Persis.c
+	$(CPP) -c src/Persistence/Account_Persis.c -o src/Persistence/Account_Persis.o $(CXXFLAGS)
+
+src/Persistence/EntityKey_Persist.o: src/Persistence/EntityKey_Persist.c
+	$(CPP) -c src/Persistence/EntityKey_Persist.c -o src/Persistence/EntityKey_Persist.o $(CXXFLAGS)
+
+src/Persistence/Play_Persis.o: src/Persistence/Play_Persis.c
+	$(CPP) -c src/Persistence/Play_Persis.c -o src/Persistence/Play_Persis.o $(CXXFLAGS)
+
+src/Persistence/schedule_Persis.o: src/Persistence/schedule_Persis.c
+	$(CPP) -c src/Persistence/schedule_Persis.c -o src/Persistence/schedule_Persis.o $(CXXFLAGS)
+
+src/Persistence/Seat_Persist.o: src/Persistence/Seat_Persist.c
+	$(CPP) -c src/Persistence/Seat_Persist.c -o src/Persistence/Seat_Persist.o $(CXXFLAGS)
+
+src/Persistence/Studio_Persist.o: src/Persistence/Studio_Persist.c
+	$(CPP) -c src/Persistence/Studio_Persist.c -o src/Persistence/Studio_Persist.o $(CXXFLAGS)
+
+src/Persistence/Ticket_Persis.o: src/Persistence/Ticket_Persis.c
+	$(CPP) -c src/Persistence/Ticket_Persis.c -o src/Persistence/Ticket_Persis.o $(CXXFLAGS)
+
+src/Common/common.o: src/Common/common.c
+	$(CPP) -c src/Common/common.c -o src/Common/common.o $(CXXFLAGS)
+
+src/Common/listTestDrv.o: src/Common/listTestDrv.c
+	$(CPP) -c src/Common/listTestDrv.c -o src/Common/listTestDrv.o $(CXXFLAGS)
+
+src/TTMS.o: src/TTMS.c
+	$(CPP) -c src/TTMS.c -o src/TTMS.o $(CXXFLAGS)
